@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F751A70F-7C48-439A-9A0C-656896FC1CE8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Store_Market_1</RootNamespace>
+    <AssemblyName>Store Market 1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInformationForm.Designer.cs">
+      <DependentUpon>AdminInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminManagerForm.Designer.cs">
+      <DependentUpon>AdminManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRGForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminRGForm.Designer.cs">
+      <DependentUpon>AdminRGForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agent.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="DBCode1.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerPanelForm.Designer.cs">
+      <DependentUpon>ManagerPanelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203272146540_InitialCreate.cs" />
+    <Compile Include="Migrations\202203272146540_InitialCreate.designer.cs">
+      <DependentUpon>202203272146540_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203291141222_accessCode.cs" />
+    <Compile Include="Migrations\202203291141222_accessCode.designer.cs">
+      <DependentUpon>202203291141222_accessCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassForm.Designer.cs">
+      <DependentUpon>ResetPassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoleAccess.cs" />
+    <Compile Include="RoleAccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoleAccessForm.Designer.cs">
+      <DependentUpon>RoleAccessForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminInformationForm.resx">
+      <DependentUpon>AdminInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminManagerForm.resx">
+      <DependentUpon>AdminManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRGForm.resx">
+      <DependentUpon>AdminRGForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerPanelForm.resx">
+      <DependentUpon>ManagerPanelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203272146540_InitialCreate.resx">
+      <DependentUpon>202203272146540_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203291141222_accessCode.resx">
+      <DependentUpon>202203291141222_accessCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ResetPassForm.resx">
+      <DependentUpon>ResetPassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoleAccessForm.resx">
+      <DependentUpon>RoleAccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Admin.datasource" />
+    <None Include="Properties\DataSources\RoleAccess.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\loginForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action-exit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Everaldo-Crystal-Clear-Action-exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Everaldo-Crystal-Clear-Action-cancel %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\MainForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-preferences-desktop-user-password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-contact-new-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erreur-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-network-connection-manager-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Books-1-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categories-applications-education-university-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\shopping-bags-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\pie-chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\visa-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\credit-card-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\offline-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\tester-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\App-login-manager-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\UserPanelForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\P1_ico\Iconshock-Real-Vista-Project-Managment-Tester.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\admin-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\Groups-Rescuers-Light-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\company-building-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\App-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\arrow-next-3-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\UserPanelForm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\P1_ico\Everaldo-Crystal-Clear-Action-db-add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\P1_ico\Everaldo-Crystal-Clear-Action-db-status.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\P1_ico\Everaldo-Crystal-Clear-Action-db-remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\P1_ico\Everaldo-Crystal-Clear-App-Quick-restart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\P1_ico\Everaldo-Crystal-Clear-Action-ok %281%29.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

@@ -1,0 +1,25 @@
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\bin\Debug\Store Market 1.exe.config
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\bin\Debug\Store Market 1.exe
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\bin\Debug\Store Market 1.pdb
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store Market 1.csproj.AssemblyReference.cache
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store Market 1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Properties.Resources.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store Market 1.csproj.GenerateResource.cache
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store Market 1.csproj.CoreCompileInputs.cache
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store Market 1.exe
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store Market 1.pdb
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.LoginFrm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.MainForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\bin\Debug\EntityFramework.dll
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\bin\Debug\EntityFramework.xml
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.AdminRGForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store Market 1.csproj.CopyComplete
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.RoleAccessForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.ResetPassForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.ManagerPanelForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.AdminManagerForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Migrations.InitialCreate.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Migrations.accessCode.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.AdminInformationForm.resources
