@@ -15,5 +15,6 @@ namespace Store_Market_1
         public String Email { get; set; }
         public String Address { get; set; }
         public String Site { get; set; }
+        public bool Status { get; set; }
     }
 }

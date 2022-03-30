@@ -23,13 +23,23 @@ namespace Store_Market_1
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   //مدیریت ادمین ها
             (new AdminManagerForm()).ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {   //باشگاه مشتریان
+            (new CustomerForm()).ShowDialog();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {   // مدیریت شرکت ها
+            (new CompanyManagerForm()).ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {   // مدیریت نماینده ها
+            (new Agentfrm()).ShowDialog();
         }
     }
 }

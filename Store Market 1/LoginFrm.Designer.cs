@@ -72,27 +72,30 @@
             // usertxt
             // 
             this.usertxt.BackColor = System.Drawing.Color.Pink;
+            this.usertxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usertxt.Location = new System.Drawing.Point(310, 134);
             this.usertxt.Name = "usertxt";
-            this.usertxt.Size = new System.Drawing.Size(193, 20);
+            this.usertxt.Size = new System.Drawing.Size(193, 23);
             this.usertxt.TabIndex = 2;
             // 
             // passtxt
             // 
             this.passtxt.BackColor = System.Drawing.Color.Pink;
+            this.passtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passtxt.Location = new System.Drawing.Point(310, 160);
             this.passtxt.Name = "passtxt";
             this.passtxt.PasswordChar = '*';
-            this.passtxt.Size = new System.Drawing.Size(193, 20);
+            this.passtxt.Size = new System.Drawing.Size(193, 23);
             this.passtxt.TabIndex = 3;
             // 
             // accesstxt
             // 
             this.accesstxt.BackColor = System.Drawing.Color.Pink;
+            this.accesstxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accesstxt.Location = new System.Drawing.Point(310, 186);
             this.accesstxt.Name = "accesstxt";
             this.accesstxt.PasswordChar = '$';
-            this.accesstxt.Size = new System.Drawing.Size(193, 20);
+            this.accesstxt.Size = new System.Drawing.Size(193, 23);
             this.accesstxt.TabIndex = 4;
             // 
             // label1

@@ -29,20 +29,27 @@ namespace Store_Market_1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(Fun.Enter(new Admin
+            try
             {
-                Username = usertxt.Text,
-                Password = passtxt.Text,
-                accessCode = accesstxt.Text
-            }))
-            {
-                MessageBox.Show("به فروشگاه خوش آمدید");
-                this.Hide();
-                (new MainForm()).ShowDialog();
+                if (Fun.Enter(new Admin
+                {
+                    Username = usertxt.Text,
+                    Password = passtxt.Text,
+                    accessCode = accesstxt.Text
+                }))
+                {
+                    MessageBox.Show("به فروشگاه خوش آمدید");
+                    this.Hide();
+                    (new MainForm()).ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("نام و رمز کاربری اشتباه است ", "خطا در ورود");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("نام و رمز کاربری اشتباه است ","خطا در ورود");
+                MessageBox.Show("اطلاعات وارد نشده است");
             }
         }
 

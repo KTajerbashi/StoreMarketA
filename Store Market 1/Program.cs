@@ -16,7 +16,7 @@ namespace Store_Market_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminManagerForm());
+            Application.Run(new ManagerPanelForm());
         }
     }
 }

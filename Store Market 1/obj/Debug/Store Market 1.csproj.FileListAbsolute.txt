@@ -23,3 +23,7 @@ C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\o
 C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Migrations.InitialCreate.resources
 C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Migrations.accessCode.resources
 C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.AdminInformationForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.CustomerForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Migrations.percent.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.CompanyManagerForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Migrations.Status.resources

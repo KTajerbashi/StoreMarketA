@@ -10,5 +10,6 @@ namespace Store_Market_1
     {
         public int id { get; set; }
         public Double BuyCost { get; set; }
+        public int Percent { get; set; }
     }
 }

@@ -23,13 +23,37 @@ namespace Store_Market_1
                 }
             }
         }
-        
+
         public bool selectStatus(String name, String family)
         {
             DBCode1 dbc = new DBCode1();
             foreach (var item in dbc.admins)
             {
                 if (item.Name == name && item.Family == family)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool selectStatusCustumer(String name, String family)
+        {
+            DBCode1 dbc = new DBCode1();
+            foreach (var item in dbc.customers)
+            {
+                if (item.Name == name && item.Family == family)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool SelectCompany(String CName, String MName)
+        {
+            DBCode1 dbc = new DBCode1();
+            foreach (var item in dbc.companies)
+            {
+                if (item.CompanyName == CName && item.CompanyManager == MName)
                 {
                     return true;
                 }
@@ -82,6 +106,27 @@ namespace Store_Market_1
             }
             return false;
         }
+        public bool RegisterCustomer(Customer customer)
+        {
+            DBCode1 dbc = new DBCode1();
+            if (!selectStatusCustumer(customer.Name, customer.Family))
+            {
+                dbc.customers.Add(new Customer
+                {
+                    Name = customer.Name,
+                    Family = customer.Family,
+                    RoleId = customer.RoleId,
+                    Phone = customer.Phone,
+                    IsActive = customer.IsActive,
+                    Percent = customer.Percent,
+                    BuyCost = customer.BuyCost
+                });
+                dbc.SaveChanges();
+                return true;
+            }
+
+                return false;
+        }
         public bool Enter(Admin admin)
         {
             DBCode1 dbc = new DBCode1();
@@ -129,6 +174,26 @@ namespace Store_Market_1
 
             return true;
         }
-        
+        public bool RegisterCompany(Company company)
+        {
+            DBCode1 dbc = new DBCode1();
+            if (!SelectCompany(company.CompanyName,company.CompanyManager))
+            {
+                dbc.companies.Add(new Company
+                {
+                    CompanyName = company.CompanyName,
+                    CompanyManager = company.CompanyManager,
+                    Phone = company.Phone,
+                    Email = company.Email,
+                    Address = company.Address,
+                    Site = company.Site,
+                    Status = company.Status
+                });
+                dbc.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
     }
 }
