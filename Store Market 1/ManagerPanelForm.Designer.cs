@@ -131,6 +131,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManagerPanelForm";
             this.Text = "ManagerPanelForm";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ManagerPanelForm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

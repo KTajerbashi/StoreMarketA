@@ -73,6 +73,16 @@ namespace Store_Market_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Action_viewmag_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Action-viewmag-icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Actions_contact_new_icon {
             get {
                 object obj = ResourceManager.GetObject("Actions-contact-new-icon", resourceCulture);
@@ -123,6 +133,16 @@ namespace Store_Market_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_login_manager_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("App-login-manager-icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_network_connection_manager_icon {
             get {
                 object obj = ResourceManager.GetObject("App-network-connection-manager-icon", resourceCulture);
@@ -146,6 +166,16 @@ namespace Store_Market_1.Properties {
         internal static System.Drawing.Bitmap App_user_icon {
             get {
                 object obj = ResourceManager.GetObject("App-user-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_user_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("App-user-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

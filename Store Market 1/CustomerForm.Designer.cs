@@ -478,6 +478,7 @@
             this.Text = "پنل مشتریان";
             this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CustomerForm_MouseClick);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CustomerForm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

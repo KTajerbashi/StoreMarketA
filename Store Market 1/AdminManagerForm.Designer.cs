@@ -338,6 +338,7 @@
             this.Text = "AdminManagerForm";
             this.Load += new System.EventHandler(this.AdminManagerForm_Load);
             this.Click += new System.EventHandler(this.AdminManagerForm_Click);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminManagerForm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

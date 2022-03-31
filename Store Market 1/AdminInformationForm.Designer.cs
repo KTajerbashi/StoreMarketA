@@ -49,16 +49,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.roletxt = new System.Windows.Forms.ComboBox();
+            this.roleAccessBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statustxt = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Savebtn = new System.Windows.Forms.Button();
             this.StatusLable = new System.Windows.Forms.Label();
-            this.roleAccessBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.IDTXT = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.roleAccessBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleAccessBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nametxt
@@ -240,6 +240,10 @@
             this.roletxt.TabIndex = 9;
             this.roletxt.Text = "فروشنده";
             // 
+            // roleAccessBindingSource
+            // 
+            this.roleAccessBindingSource.DataSource = typeof(Store_Market_1.RoleAccess);
+            // 
             // statustxt
             // 
             this.statustxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -304,10 +308,6 @@
             this.StatusLable.TabIndex = 25;
             this.StatusLable.Text = "نمایش وضعیت";
             // 
-            // roleAccessBindingSource
-            // 
-            this.roleAccessBindingSource.DataSource = typeof(Store_Market_1.RoleAccess);
-            // 
             // IDTXT
             // 
             this.IDTXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -356,9 +356,11 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "ثبت اطلاعات ادمین";
             this.Load += new System.EventHandler(this.AdminInformationForm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminInformationForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminInformationForm_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.roleAccessBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleAccessBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

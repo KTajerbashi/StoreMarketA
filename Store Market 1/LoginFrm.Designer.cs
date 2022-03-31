@@ -198,6 +198,7 @@
             this.Text = "صفحه ورود";
             this.TransparencyKey = System.Drawing.SystemColors.ActiveCaptionText;
             this.Load += new System.EventHandler(this.LoginFrm_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginFrm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

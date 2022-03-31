@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Store_Market_1
 {
@@ -23,7 +21,6 @@ namespace Store_Market_1
                 }
             }
         }
-
         public bool selectStatus(String name, String family)
         {
             DBCode1 dbc = new DBCode1();
@@ -188,6 +185,45 @@ namespace Store_Market_1
                     Address = company.Address,
                     Site = company.Site,
                     Status = company.Status
+                });
+                dbc.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+        public bool selectAgent(String name,String Family)
+        {
+            DBCode1 dbc = new DBCode1();
+            foreach (var item in dbc.agents)
+            {
+                if(item.Name==name && item.Family == Family)
+                {
+                    return true;
+                }                
+            }
+
+            return false;
+        }
+        public bool RegisterAgent(Agent agent)
+        {
+            DBCode1 dbc = new DBCode1();
+            var company = from i in dbc.companies where i.CompanyName == agent.CompanyName select i;
+            foreach (var item in company)
+            {
+                //MessageBox.Show(item.id.ToString());
+                agent.CompanyID = item.id;
+            }
+            if (!selectAgent(agent.Name, agent.Family))
+            {
+                dbc.agents.Add(new Agent
+                {
+                    Name = agent.Name,
+                    Family = agent.Family,
+                    Phone = agent.Phone,
+                    CompanyName = agent.CompanyName,
+                    CompanyID=agent.CompanyID,
+                    IsActive = agent.IsActive
                 });
                 dbc.SaveChanges();
                 return true;

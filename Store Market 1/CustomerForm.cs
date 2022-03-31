@@ -7,11 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Store_Market_1
 {
     public partial class CustomerForm : Form
     {
+        #region MOve Code
+        const int HT_CAPTION = 0x2;
+        const int WM_NCLBUTTONDOWN = 0xA1;
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+        #endregion
+
         public CustomerForm()
         {
             InitializeComponent();
@@ -151,6 +161,15 @@ namespace Store_Market_1
         private void button2_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = (new DBCode1().customers).ToList();
+        }
+
+        private void CustomerForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }

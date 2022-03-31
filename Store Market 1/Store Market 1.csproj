@@ -134,6 +134,14 @@
     <Compile Include="Migrations\202203301905143_Status.designer.cs">
       <DependentUpon>202203301905143_Status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203311304296_CompanyName.cs" />
+    <Compile Include="Migrations\202203311304296_CompanyName.designer.cs">
+      <DependentUpon>202203311304296_CompanyName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203311343299_CompanyName1.cs" />
+    <Compile Include="Migrations\202203311343299_CompanyName1.designer.cs">
+      <DependentUpon>202203311343299_CompanyName1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Product.cs" />
@@ -160,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminRGForm.resx">
       <DependentUpon>AdminRGForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agentfrm.resx">
+      <DependentUpon>Agentfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyManagerForm.resx">
       <DependentUpon>CompanyManagerForm.cs</DependentUpon>
@@ -188,6 +199,12 @@
     <EmbeddedResource Include="Migrations\202203301905143_Status.resx">
       <DependentUpon>202203301905143_Status.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203311304296_CompanyName.resx">
+      <DependentUpon>202203311304296_CompanyName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203311343299_CompanyName1.resx">
+      <DependentUpon>202203311343299_CompanyName1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -206,6 +223,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Admin.datasource" />
+    <None Include="Properties\DataSources\Agent.datasource" />
     <None Include="Properties\DataSources\Company.datasource" />
     <None Include="Properties\DataSources\Customer.datasource" />
     <None Include="Properties\DataSources\RoleAccess.datasource" />
@@ -335,6 +353,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ico\App-Quick-restart-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ico\Action-viewmag-icon %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

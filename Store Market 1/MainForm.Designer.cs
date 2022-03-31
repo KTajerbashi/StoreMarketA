@@ -162,6 +162,7 @@
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.TransparencyKey = System.Drawing.Color.Black;
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.ResumeLayout(false);
 
         }
