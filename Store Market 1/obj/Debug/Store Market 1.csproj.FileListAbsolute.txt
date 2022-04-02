@@ -30,3 +30,5 @@ C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\o
 C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Agentfrm.resources
 C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Migrations.CompanyName.resources
 C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Migrations.CompanyName1.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.ProductsForm.resources
+C:\Users\Tajerbashi\Desktop\Class\Source Code C#\Store Market 1\Store Market 1\obj\Debug\Store_Market_1.Migrations.Delete.resources

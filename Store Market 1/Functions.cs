@@ -124,7 +124,7 @@ namespace Store_Market_1
 
                 return false;
         }
-        public bool Enter(Admin admin)
+        public bool LoginUser(Admin admin)
         {
             DBCode1 dbc = new DBCode1();
             foreach (var item in dbc.admins)

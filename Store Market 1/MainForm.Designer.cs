@@ -31,15 +31,17 @@
             System.Windows.Forms.Button button2;
             System.Windows.Forms.Button button3;
             System.Windows.Forms.Button button4;
-            System.Windows.Forms.Button button5;
             System.Windows.Forms.Button button6;
+            System.Windows.Forms.Button button5;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.AdminNameL = new System.Windows.Forms.Label();
             button2 = new System.Windows.Forms.Button();
             button3 = new System.Windows.Forms.Button();
             button4 = new System.Windows.Forms.Button();
-            button5 = new System.Windows.Forms.Button();
             button6 = new System.Windows.Forms.Button();
+            button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -54,9 +56,11 @@
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(122, 170);
             button2.TabIndex = 1;
+            button2.Text = "اجناس فروشگاه";
             button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             button2.UseCompatibleTextRendering = true;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -66,11 +70,11 @@
             button3.ForeColor = System.Drawing.Color.Purple;
             button3.Image = global::Store_Market_1.Properties.Resources.pie_chart_icon;
             button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            button3.Location = new System.Drawing.Point(476, 111);
+            button3.Location = new System.Drawing.Point(180, 111);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(122, 170);
             button3.TabIndex = 2;
-            button3.Text = "محاسبات";
+            button3.Text = "انبار فروشگاه";
             button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             button3.UseCompatibleTextRendering = true;
             button3.UseVisualStyleBackColor = false;
@@ -91,23 +95,6 @@
             button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             button4.UseCompatibleTextRendering = true;
             button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = System.Drawing.Color.Transparent;
-            button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button5.Font = new System.Drawing.Font("MRT_Sahafa", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            button5.ForeColor = System.Drawing.Color.Purple;
-            button5.Image = global::Store_Market_1.Properties.Resources.credit_card_icon;
-            button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            button5.Location = new System.Drawing.Point(182, 111);
-            button5.Name = "button5";
-            button5.Size = new System.Drawing.Size(122, 170);
-            button5.TabIndex = 4;
-            button5.Text = "پرداخت ها";
-            button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            button5.UseCompatibleTextRendering = true;
-            button5.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
@@ -131,7 +118,8 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Image = global::Store_Market_1.Properties.Resources.Everaldo_Crystal_Clear_Action_exit;
             this.button1.Location = new System.Drawing.Point(744, 52);
@@ -141,6 +129,47 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button7.Location = new System.Drawing.Point(719, 60);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(19, 23);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "_";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // AdminNameL
+            // 
+            this.AdminNameL.AutoSize = true;
+            this.AdminNameL.BackColor = System.Drawing.Color.Transparent;
+            this.AdminNameL.Location = new System.Drawing.Point(12, 70);
+            this.AdminNameL.Name = "AdminNameL";
+            this.AdminNameL.Size = new System.Drawing.Size(47, 13);
+            this.AdminNameL.TabIndex = 13;
+            this.AdminNameL.Text = "نام ادمین";
+            // 
+            // button5
+            // 
+            button5.BackColor = System.Drawing.Color.Transparent;
+            button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button5.Font = new System.Drawing.Font("MRT_Sahafa", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            button5.ForeColor = System.Drawing.Color.Purple;
+            button5.Image = global::Store_Market_1.Properties.Resources.credit_card_icon;
+            button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            button5.Location = new System.Drawing.Point(477, 111);
+            button5.Name = "button5";
+            button5.Size = new System.Drawing.Size(122, 170);
+            button5.TabIndex = 14;
+            button5.Text = "حسابداری";
+            button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            button5.UseCompatibleTextRendering = true;
+            button5.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,8 +178,10 @@
             this.BackgroundImage = global::Store_Market_1.Properties.Resources.MainForm;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(781, 450);
-            this.Controls.Add(button6);
             this.Controls.Add(button5);
+            this.Controls.Add(this.AdminNameL);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(button6);
             this.Controls.Add(button4);
             this.Controls.Add(button3);
             this.Controls.Add(button2);
@@ -164,11 +195,14 @@
             this.TransparencyKey = System.Drawing.Color.Black;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button7;
+        public System.Windows.Forms.Label AdminNameL;
     }
 }

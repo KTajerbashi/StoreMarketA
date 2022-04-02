@@ -41,7 +41,7 @@ namespace Store_Market_1
         {
             try
             {
-                if (Fun.Enter(new Admin
+                if (Fun.LoginUser(new Admin
                 {
                     Username = usertxt.Text,
                     Password = passtxt.Text,
@@ -50,7 +50,10 @@ namespace Store_Market_1
                 {
                     MessageBox.Show("به فروشگاه خوش آمدید");
                     this.Hide();
-                    (new MainForm()).ShowDialog();
+                    MainForm mainForm = new MainForm();
+                    mainForm.AdminNameL.Text = accesstxt.Text;
+                    (mainForm).ShowDialog();
+                    
                 }
                 else
                 {
@@ -80,6 +83,11 @@ namespace Store_Market_1
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

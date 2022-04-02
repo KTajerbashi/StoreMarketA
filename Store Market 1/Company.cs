@@ -16,5 +16,6 @@ namespace Store_Market_1
         public String Address { get; set; }
         public String Site { get; set; }
         public bool Status { get; set; }
+        public bool Delete { get; set; } = true;
     }
 }

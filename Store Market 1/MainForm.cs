@@ -49,5 +49,21 @@ namespace Store_Market_1
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {   //  اجناس فروشگاه
+            ProductsForm productsForm= new ProductsForm();
+            productsForm.AdminName.Text = AdminNameL.Text;
+            this.WindowState = FormWindowState.Minimized;
+            productsForm.ShowDialog();
+            productsForm.WindowState = FormWindowState.Normal;
+
+        }
     }
 }

@@ -107,7 +107,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Store_Market_1.Properties.Resources.App_login_manager_icon2;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 82);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 136);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(144, 153);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

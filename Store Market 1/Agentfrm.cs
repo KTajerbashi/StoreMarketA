@@ -82,11 +82,9 @@ namespace Store_Market_1
         }
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            Sw = true;
             if (ID == -1)
             {
                 contextMenuStrip1.Enabled = false;
-
             }
             if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
@@ -94,13 +92,14 @@ namespace Store_Market_1
             }
             else
             {
+                Sw = true;
                 ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 contextMenuStrip1.Enabled = true;
             }
         }
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            Sw = false;
+            
             if (ID == -1)
             {
                 contextMenuStrip1.Enabled = false;
@@ -111,6 +110,7 @@ namespace Store_Market_1
             }
             else
             {
+                Sw = false;
                 ID = int.Parse(dataGridView2.CurrentRow.Cells[0].Value.ToString());
                 contextMenuStrip1.Enabled = true;
             }
@@ -193,26 +193,27 @@ namespace Store_Market_1
         }
 
         private void تغییروضعیتToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {   
             if (Sw)
             {// Agent
-                String StatusNow = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                String StatusNow = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                 Agent agent = dbc.agents.Where(c => c.Id == ID).FirstOrDefault();
-                agent.IsActive = StatusNow == "true" ? false : true;
+                agent.IsActive = StatusNow == "True" ? false : true;
                 dbc.SaveChanges();
                 dataGridView1.DataSource = dbc.agents.ToList();
+
             }
             else
             {
                 String StatusNow = dataGridView2.CurrentRow.Cells[4].Value.ToString();
                 Company company = dbc.companies.Where(c => c.id == ID).FirstOrDefault();
-                company.Status = StatusNow == "true" ? false : true;
+                company.Status = StatusNow == "True" ? false : true;
                 dbc.SaveChanges();
                 dataGridView2.DataSource = dbc.companies.ToList();
 
             }
             contextMenuStrip1.Enabled = false;
-
+            Sw = false;
         }
 
         private void Searchbtn_Click(object sender, EventArgs e)
@@ -266,6 +267,7 @@ namespace Store_Market_1
                     agent.CompanyName = companytxt.Text;
                     agent.IsActive = (statusID.Text) == "فعال" ? true : false;
                     dbc.SaveChanges();
+                    Csavebtn.Text = "ذخیره";
                     Asavebtn.Text = "ذخیره";
                     StatusLable.Text = "اطلاعات بروزرسانی شد";
                     Fun.ClearTextBoxes(this.Controls);
@@ -320,6 +322,7 @@ namespace Store_Market_1
                     company.Status = (comStatustxt.Text) == "فعال" ? true : false;
                     dbc.SaveChanges();
                     Csavebtn.Text = "ذخیره";
+                    Asavebtn.Text = "ذخیره";
                     StatusLable.Text = "اطلاعات بروزرسانی شد";
                     Fun.ClearTextBoxes(this.Controls);
                     SS = false;

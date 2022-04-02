@@ -26,10 +26,23 @@ namespace Store_Market_1
         {
             InitializeComponent();
         }
-
+        DBCode1 dbc = new DBCode1();
         Functions Fun = new Functions();
         bool Sw = true;
-        int id=-1;
+        int ID = -1;
+        public void fulldata()
+        {
+            var q = from i in dbc.companies where i.Delete == false select i;
+            
+            dataGridView1.DataSource = q.ToList();
+        }
+        public void ActiveData()
+        {
+            var q = from i in dbc.companies where i.Status == true && i.Delete==false select i;
+            
+            dataGridView1.DataSource = q.ToList();
+        }
+       
 
         private void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -62,13 +75,13 @@ namespace Store_Market_1
             
             if (DialogResult.Yes == MessageBox.Show("آیا اطلاعات\n" + Company + "\nاز\n" + Manager + "\nحذف شود ؟", "تایید درخواست", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                DBCode1 dbc = new DBCode1();
-                Company co = dbc.companies.Where(c => c.id == id).FirstOrDefault();
-                dbc.companies.Remove(co);
+                Company co = dbc.companies.Where(c => c.id == ID).FirstOrDefault();
+                co.Delete = true;
+                //dbc.companies.Remove(co);
                 dbc.SaveChanges();
                 StatusLable.Text = "اطلاعات مورد نظر حذف شد";
-                dataGridView1.DataSource = (new DBCode1().companies).ToList();
+                ActiveData();
+
             }
             contextMenuStrip1.Enabled = false;
 
@@ -97,14 +110,12 @@ namespace Store_Market_1
 
                     StatusLable.Text = "اطلاعات ذخیره شد";
                     Fun.ClearTextBoxes(this.Controls);
-                    dataGridView1.DataSource = (new DBCode1().companies).ToList();
+                    ActiveData();
+
                 }
                 else if (!Sw)
                 {// ویرایش اطلاعات
-                    int id = int.Parse(nametxt.Tag.ToString());
-
-                    DBCode1 dbc = new DBCode1();
-                    Company company = dbc.companies.Where(co => co.id == id).FirstOrDefault();
+                    Company company = dbc.companies.Where(co => co.id == ID).FirstOrDefault();
 
                     company.CompanyName = nametxt.Text;
                     company.CompanyManager = managertxt.Text;
@@ -116,7 +127,7 @@ namespace Store_Market_1
                     dbc.SaveChanges();
 
                     Fun.ClearTextBoxes(this.Controls);
-                    dataGridView1.DataSource = (new DBCode1().companies).ToList();
+                    ActiveData();
 
                     StatusLable.Text = "اطلاعات مورد نظر بروزرسانی شد";
                     savebtn.Text = "ذخیره";
@@ -136,14 +147,15 @@ namespace Store_Market_1
 
         private void CompanyManagerForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = (new DBCode1().companies).ToList();
+            ActiveData();
+
             contextMenuStrip1.Enabled = false;
 
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (id == -1)
+            if (ID == -1)
             {
                 contextMenuStrip1.Enabled = false;
             }
@@ -154,7 +166,7 @@ namespace Store_Market_1
             else
             {
 
-                id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 contextMenuStrip1.Enabled = true;
             }
         }
@@ -171,6 +183,22 @@ namespace Store_Market_1
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void نمایشکلاطلاعاتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fulldata();
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            dataGridView1.Rows[e.RowIndex].Cells[1].Value = e.RowIndex + 1;
         }
     }
 }

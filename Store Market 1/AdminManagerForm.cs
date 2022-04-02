@@ -98,7 +98,6 @@ namespace Store_Market_1
             //MessageBox.Show(Convert.ToString(adminfrm.nametxt.Tag));
             if (adminfrm.IDTXT.Tag != null)
             {
-                adminfrm.pictureBox2.Image = Image.FromFile("Male-user-edit-icon.png");
                 (adminfrm).ShowDialog();
             }
         }

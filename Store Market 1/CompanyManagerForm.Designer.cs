@@ -38,15 +38,6 @@
             this.ویرایشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.companyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyManagerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.siteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addresstxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,11 +55,21 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.savebtn = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.نمایشکلاطلاعاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyManagerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // StatusLable
@@ -77,7 +78,7 @@
             this.StatusLable.BackColor = System.Drawing.Color.Transparent;
             this.StatusLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.StatusLable.Location = new System.Drawing.Point(3, 198);
+            this.StatusLable.Location = new System.Drawing.Point(0, 0);
             this.StatusLable.Name = "StatusLable";
             this.StatusLable.Size = new System.Drawing.Size(68, 13);
             this.StatusLable.TabIndex = 42;
@@ -86,14 +87,14 @@
             // حذفToolStripMenuItem
             // 
             this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
-            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.حذفToolStripMenuItem.Text = "حذف";
             this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
             // 
             // ویرایشToolStripMenuItem
             // 
             this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
-            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.ویرایشToolStripMenuItem.Text = "ویرایش";
             this.ویرایشToolStripMenuItem.Click += new System.EventHandler(this.ویرایشToolStripMenuItem_Click);
             // 
@@ -101,10 +102,11 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ویرایشToolStripMenuItem,
-            this.حذفToolStripMenuItem});
+            this.حذفToolStripMenuItem,
+            this.نمایشکلاطلاعاتToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(111, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(168, 70);
             // 
             // dataGridView1
             // 
@@ -124,8 +126,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.statusDataGridViewCheckBoxColumn,
-            this.companyNameDataGridViewTextBoxColumn,
+            this.NU,
             this.companyManagerDataGridViewTextBoxColumn,
             this.phoneDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
@@ -143,14 +144,219 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 214);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 291);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(674, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(576, 236);
             this.dataGridView1.TabIndex = 41;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // addresstxt
+            // 
+            this.addresstxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.addresstxt.Location = new System.Drawing.Point(305, 208);
+            this.addresstxt.Name = "addresstxt";
+            this.addresstxt.Size = new System.Drawing.Size(180, 20);
+            this.addresstxt.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label5.Location = new System.Drawing.Point(490, 207);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 23);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "آدرس :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label7.Location = new System.Drawing.Point(491, 260);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 23);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "وضعیت :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label6.Location = new System.Drawing.Point(491, 233);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 23);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "سایت :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Location = new System.Drawing.Point(490, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 23);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "ایمیل :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Location = new System.Drawing.Point(490, 154);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 23);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "تلفن :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(490, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 23);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "مدیر شرکت :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(490, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 23);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "نام شرکت :";
+            // 
+            // statustxt
+            // 
+            this.statustxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.statustxt.FormattingEnabled = true;
+            this.statustxt.Items.AddRange(new object[] {
+            "فعال",
+            "غیر فعال"});
+            this.statustxt.Location = new System.Drawing.Point(385, 259);
+            this.statustxt.Name = "statustxt";
+            this.statustxt.Size = new System.Drawing.Size(100, 21);
+            this.statustxt.TabIndex = 28;
+            // 
+            // emailtxt
+            // 
+            this.emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.emailtxt.Location = new System.Drawing.Point(305, 180);
+            this.emailtxt.Name = "emailtxt";
+            this.emailtxt.Size = new System.Drawing.Size(180, 20);
+            this.emailtxt.TabIndex = 26;
+            // 
+            // phonetxt
+            // 
+            this.phonetxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.phonetxt.Location = new System.Drawing.Point(304, 154);
+            this.phonetxt.Name = "phonetxt";
+            this.phonetxt.Size = new System.Drawing.Size(180, 20);
+            this.phonetxt.TabIndex = 25;
+            // 
+            // managertxt
+            // 
+            this.managertxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.managertxt.Location = new System.Drawing.Point(304, 128);
+            this.managertxt.Name = "managertxt";
+            this.managertxt.Size = new System.Drawing.Size(180, 20);
+            this.managertxt.TabIndex = 24;
+            // 
+            // nametxt
+            // 
+            this.nametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.nametxt.Location = new System.Drawing.Point(304, 102);
+            this.nametxt.Name = "nametxt";
+            this.nametxt.Size = new System.Drawing.Size(180, 20);
+            this.nametxt.TabIndex = 23;
+            // 
+            // sitetxt
+            // 
+            this.sitetxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.sitetxt.Location = new System.Drawing.Point(304, 234);
+            this.sitetxt.Name = "sitetxt";
+            this.sitetxt.Size = new System.Drawing.Size(181, 20);
+            this.sitetxt.TabIndex = 43;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Store_Market_1.Properties.Resources.arrow_next_3_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(542, 51);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 33);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Store_Market_1.Properties.Resources.user_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 102);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(141, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
+            // 
+            // savebtn
+            // 
+            this.savebtn.BackColor = System.Drawing.Color.Transparent;
+            this.savebtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.savebtn.Font = new System.Drawing.Font("MRT_Parand", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.savebtn.Image = global::Store_Market_1.Properties.Resources.Everaldo_Crystal_Clear_Action_ok__1_;
+            this.savebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.savebtn.Location = new System.Drawing.Point(185, 253);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(113, 30);
+            this.savebtn.TabIndex = 38;
+            this.savebtn.Text = "ذخیره";
+            this.savebtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button5.Location = new System.Drawing.Point(517, 61);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(19, 23);
+            this.button5.TabIndex = 44;
+            this.button5.Text = "_";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // نمایشکلاطلاعاتToolStripMenuItem
+            // 
+            this.نمایشکلاطلاعاتToolStripMenuItem.Name = "نمایشکلاطلاعاتToolStripMenuItem";
+            this.نمایشکلاطلاعاتToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.نمایشکلاطلاعاتToolStripMenuItem.Text = "نمایش کل اطلاعات";
+            this.نمایشکلاطلاعاتToolStripMenuItem.Click += new System.EventHandler(this.نمایشکلاطلاعاتToolStripMenuItem_Click);
+            // 
+            // NU
+            // 
+            this.NU.HeaderText = "شماره";
+            this.NU.Name = "NU";
+            this.NU.ReadOnly = true;
+            this.NU.Width = 50;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -159,21 +365,6 @@
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 5;
-            // 
-            // statusDataGridViewCheckBoxColumn
-            // 
-            this.statusDataGridViewCheckBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewCheckBoxColumn.HeaderText = "وضعیت";
-            this.statusDataGridViewCheckBoxColumn.Name = "statusDataGridViewCheckBoxColumn";
-            this.statusDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.statusDataGridViewCheckBoxColumn.Width = 50;
-            // 
-            // companyNameDataGridViewTextBoxColumn
-            // 
-            this.companyNameDataGridViewTextBoxColumn.DataPropertyName = "CompanyName";
-            this.companyNameDataGridViewTextBoxColumn.HeaderText = "نام شرکت";
-            this.companyNameDataGridViewTextBoxColumn.Name = "companyNameDataGridViewTextBoxColumn";
-            this.companyNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // companyManagerDataGridViewTextBoxColumn
             // 
@@ -214,190 +405,14 @@
             // 
             this.companyBindingSource.DataSource = typeof(Store_Market_1.Company);
             // 
-            // addresstxt
-            // 
-            this.addresstxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.addresstxt.Location = new System.Drawing.Point(402, 184);
-            this.addresstxt.Name = "addresstxt";
-            this.addresstxt.Size = new System.Drawing.Size(180, 20);
-            this.addresstxt.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(587, 183);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 23);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "آدرس :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label7.Location = new System.Drawing.Point(337, 123);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 23);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "وضعیت :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.Location = new System.Drawing.Point(337, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 23);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "سایت :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(587, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 23);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "ایمیل :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(587, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 23);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "تلفن :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(587, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 23);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "مدیر شرکت :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("MRT_Parand", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(587, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 23);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "نام شرکت :";
-            // 
-            // statustxt
-            // 
-            this.statustxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.statustxt.FormattingEnabled = true;
-            this.statustxt.Items.AddRange(new object[] {
-            "فعال",
-            "غیر فعال"});
-            this.statustxt.Location = new System.Drawing.Point(231, 122);
-            this.statustxt.Name = "statustxt";
-            this.statustxt.Size = new System.Drawing.Size(100, 21);
-            this.statustxt.TabIndex = 28;
-            // 
-            // emailtxt
-            // 
-            this.emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.emailtxt.Location = new System.Drawing.Point(402, 156);
-            this.emailtxt.Name = "emailtxt";
-            this.emailtxt.Size = new System.Drawing.Size(180, 20);
-            this.emailtxt.TabIndex = 26;
-            // 
-            // phonetxt
-            // 
-            this.phonetxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.phonetxt.Location = new System.Drawing.Point(401, 130);
-            this.phonetxt.Name = "phonetxt";
-            this.phonetxt.Size = new System.Drawing.Size(180, 20);
-            this.phonetxt.TabIndex = 25;
-            // 
-            // managertxt
-            // 
-            this.managertxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.managertxt.Location = new System.Drawing.Point(401, 104);
-            this.managertxt.Name = "managertxt";
-            this.managertxt.Size = new System.Drawing.Size(180, 20);
-            this.managertxt.TabIndex = 24;
-            // 
-            // nametxt
-            // 
-            this.nametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.nametxt.Location = new System.Drawing.Point(401, 78);
-            this.nametxt.Name = "nametxt";
-            this.nametxt.Size = new System.Drawing.Size(180, 20);
-            this.nametxt.TabIndex = 23;
-            // 
-            // sitetxt
-            // 
-            this.sitetxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.sitetxt.Location = new System.Drawing.Point(161, 97);
-            this.sitetxt.Name = "sitetxt";
-            this.sitetxt.Size = new System.Drawing.Size(170, 20);
-            this.sitetxt.TabIndex = 43;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Store_Market_1.Properties.Resources.arrow_next_3_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(631, 44);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 33);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 40;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Store_Market_1.Properties.Resources.user_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            // 
-            // savebtn
-            // 
-            this.savebtn.BackColor = System.Drawing.Color.Transparent;
-            this.savebtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.savebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.savebtn.Font = new System.Drawing.Font("MRT_Parand", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.savebtn.Image = global::Store_Market_1.Properties.Resources.Everaldo_Crystal_Clear_Action_ok__1_;
-            this.savebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.savebtn.Location = new System.Drawing.Point(160, 158);
-            this.savebtn.Name = "savebtn";
-            this.savebtn.Size = new System.Drawing.Size(113, 37);
-            this.savebtn.TabIndex = 38;
-            this.savebtn.Text = "ذخیره";
-            this.savebtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.savebtn.UseVisualStyleBackColor = false;
-            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
-            // 
             // CompanyManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Store_Market_1.Properties.Resources.UserPanelForm2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(674, 450);
+            this.ClientSize = new System.Drawing.Size(576, 527);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.sitetxt);
             this.Controls.Add(this.StatusLable);
             this.Controls.Add(this.dataGridView1);
@@ -427,9 +442,9 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CompanyManagerForm_MouseDown);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,9 +475,10 @@
         private System.Windows.Forms.TextBox nametxt;
         private System.Windows.Forms.TextBox sitetxt;
         private System.Windows.Forms.BindingSource companyBindingSource;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ToolStripMenuItem نمایشکلاطلاعاتToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn statusDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NU;
         private System.Windows.Forms.DataGridViewTextBoxColumn companyManagerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
